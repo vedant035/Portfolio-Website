@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedant Nayyar — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Canvas for particle background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>VN<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">
+        <span class="terminal-prefix">$ </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="caret">|</span>
+      </p>
+      <h1 class="hero-name">
+        <span class="name-line">Vedant</span>
+        <span class="name-line accent">Nayyar</span>
+      </h1>
+      <p class="hero-title">
+        B.Tech CSE &nbsp;<span class="pipe">|</span>&nbsp; Data Science
+        &nbsp;<span class="pipe">|</span>&nbsp; C &middot; Python &middot; MATLAB
+      </p>
+      <p class="hero-institute">
+        Manav Rachna International Institute of Research and Studies
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="orbit-wrapper">
+        <div class="center-orb">
+          <span>VN</span>
+        </div>
+        <div class="orbit orbit-1">
+          <div class="planet" data-tooltip="C"><i class="fas fa-microchip"></i></div>
+        </div>
+        <div class="orbit orbit-2">
+          <div class="planet" data-tooltip="Python"><i class="fab fa-python"></i></div>
+        </div>
+        <div class="orbit orbit-3">
+          <div class="planet" data-tooltip="MATLAB"><i class="fas fa-square-root-variable"></i></div>
+        </div>
+        <div class="orbit orbit-4">
+          <div class="planet" data-tooltip="JavaScript"><i class="fab fa-js"></i></div>
+        </div>
+        <div class="orbit orbit-5">
+          <div class="planet" data-tooltip="Git"><i class="fab fa-git-alt"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="about">
+    <div class="section-label">// about me</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">Who <span class="accent">I Am</span></h2>
+        <p>
+          I'm a Computer Science &amp; Engineering student at
+          <strong>Manav Rachna International Institute of Research and Studies (MRIIRS), Faridabad</strong>,
+          specialising in Data Science. My roots trace back to Faridabad, where I completed my +2 with
+          Physics, Chemistry, and Mathematics — a foundation that still shapes how I approach problems:
+          rigorously, and from first principles.
+        </p>
+        <p>
+          These days I spend most of my time at the intersection of software engineering and quantitative
+          finance — writing C and Python for systems-level thinking, running numerical models in MATLAB,
+          and building web interfaces that make market data legible. I'm working toward a CFA charter, and
+          long-term I want to build tools that make financial analysis faster and more intuitive.
+        </p>
+        <p>
+          Outside of code and markets, I'm a bit of a film buff with a soft spot for direction and visual
+          storytelling — usually with good music playing in the background.
+        </p>
+        <div class="about-badges">
+          <span class="badge-chip"><i class="fas fa-shield-halved"></i>NCC Cadet</span>
+          <span class="badge-chip"><i class="fas fa-award"></i>Six Sigma White Belt</span>
+          <span class="badge-chip"><i class="fas fa-chart-line"></i>Aspiring CFA</span>
+        </div>
+      </div>
+
+      <div class="about-card-stack reveal">
+        <div class="info-card glass">
+          <i class="fas fa-graduation-cap card-icon"></i>
+          <div>
+            <h4>Education</h4>
+            <p>B.Tech — Computer Science &amp; Engineering (Data Science)</p>
+            <small>MRIIRS, Faridabad &middot; Roll No. 25/SET/BCSE/382</small>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <i class="fas fa-code card-icon"></i>
+          <div>
+            <h4>Specialisation</h4>
+            <p>Software Engineering &times; Quantitative Finance</p>
+            <small>Numerical computing meets market analysis</small>
+          </div>
+        </div>
+        <div class="info-card glass">
+          <i class="fas fa-bolt card-icon"></i>
+          <div>
+            <h4>Focus</h4>
+            <p>Clean Code &bull; Numerical Models &bull; Market Insight</p>
+            <small>Precision-first mindset</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="skills">
+    <div class="section-label">// tech stack</div>
+    <h2 class="section-title reveal">My <span class="accent">Arsenal</span></h2>
+
+    <div class="skills-grid">
+      <div class="skill-card glass reveal" style="--delay:.05s">
+        <div class="skill-icon c-icon"><i class="fas fa-microchip"></i></div>
+        <h3>C Language</h3>
+        <p>Pointers, memory management, file I/O</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--delay:.1s">
+        <div class="skill-icon py-icon"><i class="fab fa-python"></i></div>
+        <h3>Python</h3>
+        <p>Data analysis, scripting, ML fundamentals</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--delay:.15s">
+        <div class="skill-icon matlab-icon"><i class="fas fa-square-root-variable"></i></div>
+        <h3>MATLAB</h3>
+        <p>Symbolic math, numerical methods, modelling</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--delay:.2s">
+        <div class="skill-icon struct-icon"><i class="fas fa-diagram-project"></i></div>
+        <h3>Data Structures</h3>
+        <p>Arrays, linked lists, trees &amp; algorithms</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--delay:.25s">
+        <div class="skill-icon web-icon"><i class="fab fa-html5"></i></div>
+        <h3>Web Development</h3>
+        <p>HTML5, CSS, vanilla JavaScript</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+      </div>
+      <div class="skill-card glass reveal" style="--delay:.3s">
+        <div class="skill-icon ds-icon"><i class="fas fa-chart-line"></i><i class="fas fa-database"></i></div>
+        <h3>Data Science</h3>
+        <p>EDA, visualisation, ML models</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="projects">
+    <div class="section-label">// my work</div>
+    <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+
+    <div class="projects-grid">
+      <div class="project-card glass reveal" style="--delay:.05s">
+        <div class="project-header">
+          <div class="project-num">01</div>
+          <div class="project-links">
+            <a href="https://github.com/vedantnayyar" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>Employee Payroll Management System</h3>
+        <p>A file-based payroll system built in C, with automatic salary computation, employee record management, and ID-based search — using dynamic memory allocation, pointer operations, and multi-file GCC compilation.</p>
+        <div class="project-tags">
+          <span>C</span><span>Pointers</span><span>File I/O</span>
+        </div>
+      </div>
+
+      <div class="project-card glass reveal" style="--delay:.1s">
+        <div class="project-header">
+          <div class="project-num">02</div>
+          <div class="project-links">
+            <a href="https://github.com/vedantnayyar" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>Calculus Computation Suite</h3>
+        <p>A MATLAB implementation covering symbolic differentiation, partial derivatives, gradient computation, and Clairaut's theorem verification.</p>
+        <div class="project-tags">
+          <span>MATLAB</span><span>Calculus</span><span>Symbolic Math</span>
+        </div>
+      </div>
+
+      <div class="project-card glass reveal featured-card" style="--delay:.15s">
+        <div class="project-header">
+          <div class="project-num">03</div>
+          <div class="project-links">
+            <a href="https://github.com/vedantnayyar" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>EquiTeX — Interactive Equity Terminal</h3>
+        <p>A Bloomberg Terminal-inspired equity research platform. Fluid HTML5 Canvas candlestick charting with synchronised state management across timeline ranges, plus vector-based crosshair tracking for responsive, sub-pixel tooltips — all without DOM node inflation.</p>
+        <div class="project-tags">
+          <span>HTML5 Canvas</span><span>State Machine</span><span>Data Viz</span>
+        </div>
+      </div>
+
+      <div class="project-card glass reveal" style="--delay:.2s">
+        <div class="project-header">
+          <div class="project-num">04</div>
+          <div class="project-links">
+            <a href="https://github.com/vedant035/MATLAB-PROJECT" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h3>Apple Inc. Equity Analysis Report</h3>
+        <p>A MATLAB equity valuation project — co-developed a risk model using Monte Carlo simulation and Sharpe Ratio analysis, then layered in DCF valuation and P/E benchmarking to produce a structured investment report.</p>
+        <div class="project-tags">
+          <span>MATLAB</span><span>Monte Carlo</span><span>DCF Valuation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENTS ── -->
+  <section id="achievements" class="achievements">
+    <div class="section-label">// credentials</div>
+    <h2 class="section-title reveal">Achievements <span class="accent">&amp; Certificates</span></h2>
+
+    <div class="achievements-grid">
+      <div class="cert-card glass reveal" style="--delay:.05s">
+        <div class="cert-top">
+          <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+          <span class="cert-status">Achievement</span>
+        </div>
+        <h3>NCC Cadet</h3>
+        <p>Trained in discipline, leadership, and teamwork through the National Cadet Corps' structured drills and camps.</p>
+      </div>
+
+      <div class="cert-card glass reveal" style="--delay:.1s">
+        <div class="cert-top">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <span class="cert-status">Certification</span>
+        </div>
+        <h3>Six Sigma White Belt</h3>
+        <p>Certified in Six Sigma fundamentals, covering process improvement, quality control, and data-driven problem solving.</p>
+      </div>
+
+      <div class="cert-card glass reveal" style="--delay:.15s">
+        <div class="cert-top">
+          <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+          <span class="cert-status in-progress">In Progress</span>
+        </div>
+        <h3>CFA Program</h3>
+        <p>Working toward the CFA charter, currently preparing for the Level I exam alongside coursework.</p>
+      </div>
+
+      <!-- Add more credentials here, following the same .cert-card structure -->
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="contact">
+    <div class="section-label">// let's connect</div>
+    <h2 class="section-title reveal">Get In <span class="accent">Touch</span></h2>
+    <p class="contact-intro reveal">Have a project in mind or just want to say hello? My inbox is always open.</p>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info glass">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <span class="contact-label">Email</span>
+            <a href="mailto:vedantnayyar035@gmail.com" class="contact-value">
+              vedantnayyar035@gmail.com
+            </a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Delhi NCR, India</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-university"></i></div>
+          <div>
+            <span class="contact-label">Institute</span>
+            <span class="contact-value">MRIIRS, Faridabad</span>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/vedantnayyar" class="social-btn" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/vedantnayyar" class="social-btn" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/" class="social-btn" title="Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form glass" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <p class="form-success" id="form-success">✓ Message sent! I'll get back to you soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>
+      Designed &amp; Built by
+      <span class="accent">Vedant Nayyar</span>
+      &nbsp;·&nbsp;
+      <span class="logo-bracket">&lt;</span>code<span class="logo-bracket">/&gt;</span>
+      with passion
+    </p>
+    <p class="footer-sub">© 2026 Vedant Nayyar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
